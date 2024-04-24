@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void permutasi(char arr[], int jumlah_karakter, int counter)
 {
@@ -30,6 +31,10 @@ void permutasi(char arr[], int jumlah_karakter, int counter)
 
 int main()
 {
+    system("cls");
+    printf("+----------------------------+\n");
+    printf("| Program Permutasi Rekursif |\n");
+    printf("+----------------------------+\n\n");
     char arr[10];
     int jumlah_karakter;
     printf("Masukkan jumlah karakter (2-10): ");
@@ -40,12 +45,13 @@ int main()
         {
             arr[i] = 'A' + i;
         }
-        printf("\nPermutasi:\n");
+        printf("\nHasil Permutasi:\n");
         permutasi(arr, jumlah_karakter, 0);
     }
     else
     {
         printf("Jumlah karakter tidak valid!\n");
     }
+    printf("\n");
   return 0;
 }
